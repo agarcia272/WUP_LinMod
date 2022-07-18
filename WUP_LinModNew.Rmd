@@ -69,6 +69,10 @@ print(predictSIMS)
 
 #### scatterplot with model fit
   
+```{r}
+plot(lmr)
+```
+
 
 ## Model 2 SIM~GRIP
 
@@ -84,18 +88,25 @@ print(predictSIMS)
 #### predict model.2 at target point
 
 #### now add the model fit to our plot for model.2
-  
+
 
 
 ## Model 3 SIM~ARM+GRIP
 
 ### Numerical results (cor)
 
-`
+```{r}
+data2=lm(SIMS~ARM+GRIP, data=data)
+summary(data2)
+```
   
 ### Inferential  (Build 2-dimentional model.3)
 
 #### predict model.3 at target point
+
+```{r}
+predict.lm(data2,newdata= data.frame(GRIP=94, ARM=88))
+```
   
 
 ## Comparing nested models ANOVA Test
