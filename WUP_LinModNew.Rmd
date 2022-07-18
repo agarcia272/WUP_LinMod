@@ -60,6 +60,10 @@ newdata=c(GRIP=94, ARM=88)
 
 #### Predict at target point
 
+```{r}
+predictSIMS=predict.lm(lmr, newdata= data.frame(GRIP=94, ARM=88))
+print(predictSIMS)
+```
 
 
 
