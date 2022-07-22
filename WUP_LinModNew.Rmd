@@ -121,6 +121,8 @@ data2=lm(SIMS~ARM+GRIP, data=data)
 summary(data2)
 ```
   
+the p-vaule for this graph is 0.000000000000000022 with a R-square value of 0.5358. Min of -3.1846, median of -0.0641 and max of 2.8634  
+  
 ### Inferential  (Build 2-dimentional model.3)
 
 #### predict model.3 at target point
@@ -138,7 +140,6 @@ predicting point for this graph is 0.1496476
 ```{r}
 anova(lmr, data2)
 ```
-
 
 ### Model.2 vs Model.3
 
