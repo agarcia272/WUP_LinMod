@@ -44,7 +44,7 @@ lmr = lm(SIMS~ARM, data=data)
 abline(lmr)
 ```
 
-the graph has a srong positive affect
+the graph has a strong positive affect 
 
 ### Numerical results
 
@@ -52,7 +52,7 @@ the graph has a srong positive affect
 cor(SIMS~ARM,data=data)
 ```
 
-the numerical result for the graph is 06860073
+the numerical result for the graph is 0.6860073
 
 ### Inferential  (Build model.1)
 
@@ -61,7 +61,7 @@ summary(lmr)
 newdata=c(GRIP=94, ARM=88)
 ```
 
-The p-vaule for GRIP and ARM is 0.00000000000000022 and the median is -0.0285
+The p-vaule for GRIP and ARM is 0.00000000000000022 with the median of -0.0285, with an R-square of 0.467, a min of-3.6467 and max of 3.0770.
 
 #### Predict at target point
 
@@ -88,11 +88,15 @@ lmr = lm(SIMS~GRIP, data=data)
 abline(lmr)
 ```
 
+This graph shows a positive strong relationship towards the middle of the graph near the 100 mark. The graphs data is increasing.
+
 ### Numerical results 
 
 ```{r}
 cor(SIMS~GRIP,data=data)
 ```
+
+the numerical result is 0.6398458
 
 ### Inferential  (Build model.2)
   
@@ -100,6 +104,8 @@ cor(SIMS~GRIP,data=data)
 summary(lmr)
 newdata=c(SIMS=95, GRIP=94)
 ```
+
+The p-vaule for SIMS and GRIP is 0.000000000000000022 with a min of -2.9295, median of -0.1219, and max of 3.3494. With R-square of 0.4053
 
 #### predict model.2 at target point
 
@@ -123,6 +129,8 @@ summary(data2)
 predict.lm(data2,newdata= data.frame(GRIP=94, ARM=88))
 ```
 
+predicting point for this graph is 0.1496476
+
 ## Comparing nested models ANOVA Test
 
 ### Model.1 vs Model.3
@@ -137,6 +145,8 @@ anova(lmr, data2)
 ```{r}
 anova(lmr, data2)
 ```
+
+
 
 ## Informally compare Model.1 with model.2
 
