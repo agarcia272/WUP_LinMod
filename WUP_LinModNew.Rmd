@@ -44,12 +44,15 @@ lmr = lm(SIMS~ARM, data=data)
 abline(lmr)
 ```
 
+the graph has a srong positive affect
+
 ### Numerical results
 
 ```{r}
 cor(SIMS~ARM,data=data)
 ```
 
+the numerical result for the graph is 06860073
 
 ### Inferential  (Build model.1)
 
@@ -58,6 +61,8 @@ summary(lmr)
 newdata=c(GRIP=94, ARM=88)
 ```
 
+The p-vaule for GRIP and ARM is 0.00000000000000022 and the median is -0.0285
+
 #### Predict at target point
 
 ```{r}
@@ -65,7 +70,7 @@ predictSIMS=predict.lm(lmr, newdata= data.frame(GRIP=94, ARM=88))
 print(predictSIMS)
 ```
 
-
+the predicting number is 0.7063836
 
 #### scatterplot with model fit
   
